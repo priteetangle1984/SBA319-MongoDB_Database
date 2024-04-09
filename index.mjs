@@ -30,5 +30,29 @@ app.use("/laptops", laptopRoutes);
 app.get('/', (req, res) => {
   res.send(
     `<div> Root routes for laptops, phones, and machines <br /> <a href='/laptops'>Laptops</a><br/><a href='phones'>Phones<br/><a href='phones'>Machines</div> `
-  )
-})
+  );
+});
+
+app.use("/phones", phoneRoutesRoutes);
+
+app.get('/', (req, res) => {
+    res.send(
+        `<div> Root routes for laptops, phones, and machines <br /> <a href='/laptops'>Laptops</a><br/><a href='phones'>Phones<br/><a href='phones'>Machines</div> `
+         /*this line is for all the 3 route*/
+    );
+});
+
+app.use("/machines", machineRoutes);
+
+app.get('/', (req, res) => {
+    res.send(
+        `<div> Root routes for laptops, phones, and machines <br /> <a href='/laptops'>Laptops</a><br/><a href='phones'>Phones<br/><a href='phones'>Machines</div> `
+         /*this line is for all the 3 route*/
+    );
+});
+
+app.listen(PORT, () => {
+  console.log(`listening`);
+});
+
+
