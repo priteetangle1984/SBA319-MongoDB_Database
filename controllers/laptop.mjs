@@ -10,18 +10,18 @@ router.get("/seed", async (req, res) => {
     try {
         await Laptop.create([
             {
-                name: 'grapelaptop',
-                color: "pink",
+                name: 'HPEnvy',
+                color: "Silver",
                 readyToUse: true
             }, 
             {
-                name: 'grape',
-                color: 'purple',
+                name: 'DellInspiron',
+                color: 'White',
                 readyToUse: false
             }, 
             {
-                name: 'cantelope',
-                color: 'orange',
+                name: 'Asus',
+                color: 'Gray',
                 readyToUse: true
             }
         ])
@@ -60,6 +60,7 @@ router.delete('/:id', async(req, res) => {
 
 // U - UPDATE
 router.put('/:id', async (req, res) => {
+    // console.log("enter laptop");
     if (req.body.readyToUse === 'on') {
         req.body.readyToUse = true;
     } else {
