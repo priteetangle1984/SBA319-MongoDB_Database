@@ -10,18 +10,21 @@ router.get("/seed", async (req, res) => {
     try {
         await Phone.create([
             {
-                name: 'grapephone',
-                color: "pink",
+                name: 'Iphone',
+                color: "White",
+                brand: "",
                 readyToUse: true
             }, 
             {
-                name: 'grape',
+                name: 'Samsung Galaxy',
                 color: 'purple',
+                brand: "Samsung",
                 readyToUse: false
             }, 
             {
-                name: 'cantelope',
-                color: 'orange',
+                name: 'BlackBerry Evolve X',
+                color: 'Black',
+                brand: "BlackBerry",
                 readyToUse: true
             }
         ])

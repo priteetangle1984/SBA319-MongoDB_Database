@@ -19,7 +19,8 @@ class Index extends React.Component {
                                 <a href={`/laptops/${laptop._id}`}>
                                     {laptop.name}
                                 </a> {' '}
-                                is {laptop.color} <br></br>
+                                is {laptop.color} {laptop.brand}
+                                <br></br>
                                 {laptop.readyToUse
                                 ? `It is ready to use`
                             :   `It is NOT ready to use`}

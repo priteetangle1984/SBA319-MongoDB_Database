@@ -7,7 +7,7 @@ class Show extends React.Component {
 
         return (
             <DefaultLayout title="Show an Individual Machine">
-                <p>The {machine.name} is {machine.color}</p>
+                <p>The {machine.name} is {machine.color} {machine.brand} </p>
                 {machine.readyToUse ? 'It is ready to use' : "NOT READY!"}
                 <br />
                 <a href={`/machines/${machine._id}/edit`}>Edit This Machine</a>

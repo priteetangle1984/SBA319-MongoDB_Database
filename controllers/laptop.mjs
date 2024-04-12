@@ -12,16 +12,19 @@ router.get("/seed", async (req, res) => {
             {
                 name: 'HPEnvy',
                 color: "Silver",
+                brand: "HP",
                 readyToUse: true
             }, 
             {
                 name: 'DellInspiron',
                 color: 'White',
+                brand: 'Dell',
                 readyToUse: false
             }, 
             {
                 name: 'Asus',
                 color: 'Gray',
+                brand: 'ASUSTeK',
                 readyToUse: true
             }
         ])

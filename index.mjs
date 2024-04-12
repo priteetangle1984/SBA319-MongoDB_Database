@@ -25,11 +25,24 @@ app.set('views', './views');
 app.engine('jsx', jsxViewEngine());
 
 
+// Validation middleware for checking if a field is empty
+const validateEmptyField = (req, res, next) => {
+  const { name, brand, color } = req.body;
+  if (!name || !brand || !color) {
+      return res.status(400).send('Name, brand, and color are required fields.');
+  }
+  next();
+};
+
 //////LAPTOP ROUTES
 app.use("/laptops", laptopRoutes);
 app.get('/', (req, res) => {
   res.send(
-    `<div> Root routes for laptops, phones, and machines <br /> <a href='/laptops'>Laptops</a><br/><a href='/phones'>Phones<br/><a href='/machines'>Machines</div> `
+    `<div> Root routes for laptops, phones, and machines <br />
+    <a href='/laptops'>Laptops</a><br/>
+    <a href='/phones'>Phones<br/>
+    <a href='/machines'>Machines<br/>`
+    /*this line is for all the 3 route*/
   );
 });
 
@@ -39,21 +52,28 @@ app.use("/phones", phoneRoutes);
 
 app.get('/', (req, res) => {
     res.send(
-        `<div> Root routes for laptops, phones, and machines <br /> <a href='/phones'>phones</a><br/><a href='phones'>Phones<br/><a href='phones'>Machines</div> `
+      `<div> Root routes for laptops, phones, and machines <br />
+      <a href='/laptops'>Laptops</a><br/>
+      <a href='/phones'>Phones<br/>
+      <a href='/machines'>Machines<br/>`
          /*this line is for all the 3 route*/
     );
 });
 
 
-/////MACHINES ROUTES
+//////MACHINE ROUTES
 app.use("/machines", machineRoutes);
-
 app.get('/', (req, res) => {
-    res.send(
-        `<div> Root routes for laptops, phones, and machines <br /> <a href='/laptops'>Laptops</a><br/><a href='phones'>Phones<br/><a href='phones'>Machines</div> `
-         /*this line is for all the 3 route*/
-    );
+  res.send(
+    `<div> Root routes for laptops, phones, and machines <br />
+    <a href='/laptops'>Laptops</a><br/>
+    <a href='/phones'>Phones<br/>
+    <a href='/machines'>Machines <br/>`
+    /*this line is for all the 3 route*/
+  );
 });
+
+
 
 app.listen(PORT, () => {
   console.log(`listening`);

@@ -19,7 +19,7 @@ class Index extends React.Component {
                                 <a href={`/phones/${phone._id}`}>
                                     {phone.name}
                                 </a> {' '}
-                                is {phone.color} <br></br>
+                                is {phone.color} {phone.brand} <br></br>
                                 {phone.readyToUse
                                 ? `It is ready to use`
                             :   `It is NOT ready to use`}

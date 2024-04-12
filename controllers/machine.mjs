@@ -10,18 +10,21 @@ router.get("/seed", async (req, res) => {
     try {
         await Machine.create([
             {
-                name: 'grapemachine',
-                color: "pink",
+                name: 'Washing Machine',
+                color: "Black",
+                brand: "Samsung",
                 readyToUse: true
             }, 
             {
-                name: 'grape',
-                color: 'purple',
+                name: 'Range Hood',
+                color: 'Silver',
+                brand: "Zypher",
                 readyToUse: false
             }, 
             {
-                name: 'cantelope',
-                color: 'orange',
+                name: 'Refrigerator',
+                color: 'Gray',
+                brand: "Whirlpool",
                 readyToUse: true
             }
         ])

@@ -12,6 +12,7 @@ class Edit extends React.Component{
       <form action={`/machines/${this.props.machine._id}?_method=PUT`} method="POST">
           Name: <input type="text" name="name" defaultValue={this.props.machine.name}/><br/>
           Color: <input type="text" name="color"  defaultValue={this.props.machine.color}/><br/>
+          Brand: <input type="text" name="brand"  defaultValue={this.props.machine.brand}/><br/>
           Is Ready To Use:
               { this.props.machine.readyToUse? <input type="checkbox" name="readyToUse" defaultChecked />: <input type="checkbox" name="readyToUse"/> }
           <br/>

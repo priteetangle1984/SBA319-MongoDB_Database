@@ -9,6 +9,7 @@ class New extends React.Component {
                 <form action='/phones' method="POST">
                     Name: <input type="text" name="name" /><br />
                     Color: < input type="text" name="color"/> <br />
+                    Brand: < input type="text" name="brand"/> <br />
                     Is Ready to Use: <input type="checkbox" name="readyToUse"/> <br />
                     <input type="submit" name="" value="Create Phone"/>
                 </form>

@@ -19,7 +19,7 @@ class Index extends React.Component {
                                 <a href={`/machines/${machine._id}`}>
                                     {machine.name}
                                 </a> {' '}
-                                is {machine.color} <br></br>
+                                is {machine.color} {machine.brand} <br></br>
                                 {machine.readyToUse
                                 ? `It is ready to use`
                             :   `It is NOT ready to use`}

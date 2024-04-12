@@ -12,6 +12,7 @@ class Edit extends React.Component{
       <form action={`/laptops/${this.props.laptop._id}?_method=PUT`} method="POST">
           Name: <input type="text" name="name" defaultValue={this.props.laptop.name}/><br/>
           Color: <input type="text" name="color"  defaultValue={this.props.laptop.color}/><br/>
+          Brand: <input type="text" name="brand"  defaultValue={this.props.laptop.brand}/><br/>
           Is Ready To Use:
               { this.props.laptop.readyToUse? <input type="checkbox" name="readyToUse" defaultChecked />: <input type="checkbox" name="readyToUse"/> }
           <br/>

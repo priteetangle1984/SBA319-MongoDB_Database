@@ -7,7 +7,7 @@ class Show extends React.Component {
 
         return (
             <DefaultLayout title="Show an Individual Laptop">
-                <p>The {laptop.name} is {laptop.color}</p>
+                <p>The {laptop.name} is {laptop.color} {laptop.brand} </p>
                 {laptop.readyToUse ? 'It is ready to use' : "NOT READY!"}
                 <br />
                 <a href={`/laptops/${laptop._id}/edit`}>Edit This Laptop</a>

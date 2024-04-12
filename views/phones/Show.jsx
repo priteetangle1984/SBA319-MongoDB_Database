@@ -7,7 +7,7 @@ class Show extends React.Component {
 
         return (
             <DefaultLayout title="Show an Individual Phone">
-                <p>The {phone.name} is {phone.color}</p>
+                <p>The {phone.name} is {phone.color} {phone.brand} </p>
                 {phone.readyToUse ? 'It is ready to use' : "NOT READY!"}
                 <br />
                 <a href={`/phones/${phone._id}/edit`}>Edit This Phone</a>
