@@ -34,6 +34,15 @@ router.get("/seed", async (req, res) => {
     }
 });
 
+
+try {
+    await Phone.validate(); // Manually run validation
+    // Other operations (e.g., saving to the database)
+} catch (error) {
+    console.error('Validation error:', error.message);
+}
+
+
 // I - Index    GET         READ - display a list of elements
 router.get('/', async (req, res) => {
     try {

@@ -26,6 +26,24 @@ router.get("/seed", async (req, res) => {
                 color: 'Gray',
                 brand: 'ASUSTeK',
                 readyToUse: true
+            },
+            {
+                name: 'HPEnvy',
+                color: "Silver",
+                brand: "HP",
+                readyToUse: true
+            }, 
+            {
+                name: 'DellInspiron',
+                color: 'White',
+                brand: 'Dell',
+                readyToUse: false
+            }, 
+            {
+                name: 'Asus',
+                color: 'Gray',
+                brand: 'ASUSTeK',
+                readyToUse: true
             }
         ])
         res.status(200).redirect('/laptops');
@@ -33,6 +51,13 @@ router.get("/seed", async (req, res) => {
         res.status(400).send(err);
     }
 });
+
+try {
+    await Laptop.validate(); // Manually run validation
+    // Other operations (e.g., saving to the database)
+} catch (error) {
+    console.error('Validation error:', error.message);
+}
 
 // I - Index    GET         READ - display a list of elements
 router.get('/', async (req, res) => {
